@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="optics.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="logo.webp" alt="Spectra Optical Logo" class="logo">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        </div>
+        <div class="nav-links">
+            <div class="close-icon" onclick="closeMenu()">✖</div>
+            <a href="index.html" >Home</a>
+            <a href="men.html">Men Glasses</a>
+            <a href="women.html">Women Glasses</a>
+            <a href="lens.html"class="H">Lens</a>
+            <a href="kids.html">Kids</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <section id="hero" id="home">
+    </section>
+    <div class="container">
+        <div class="title">Ash <span>Lenses</span></div>
+        <div class="listProduct"></div>
+    </div>
+    
+    <div class="container">
+        <div class="title">O2 <span>Lenses</span></div>
+        <div class="listProduct2"></div>
+    </div>
+    
+    <div class="container">
+        <div class="title">Durato <span>Lenses</span></div>
+        <div class="listProduct3"></div>
+    </div>
+    
+    <div class="container">
+        <div class="title">Verso <span>Lenses</span></div>
+        <div class="listProduct4"></div>
+    </div>
+    
+    <div class="container">
+        <div class="title">Prime <span>Lenses</span></div>
+        <div class="listProduct5"></div>
+    </div>
+    
+    <section class="wholesale-section">
+        <div class="wholesale-banner">
+            <h2>Buy in Bulk & Save More</h2>
+            <p>We offer premium eyewear at wholesale prices. Contact us for bulk purchases.</p>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.webp" alt="Company Logo">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="men.html">Our Services</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="men.html">Men Glasses</a></li>
+                        <li><a href="women.html">Women Glasses</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                        <li><a href="lens.html">Lenses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="about.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                          </svg>
+                          </i></a>
+                        <a href="#"><i class="fab fa-instagram"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37a4 4 0 1 1-4.73-4.73 4 4 0 0 1 4.73 4.73z"/>
+                            <line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/>
+                          </svg>
+                          </i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; color: #D4AF37; font-size: 14px; margin-top: 20px;">
+            © 2025 Reserved | Designed by <span style="font-weight: bold; color: #ffffff;">Cyber Coders</span>
+          </p>
+    </footer>
+        <script>
+          let products = null;
+    
+    // Fetch data from JSON file
+    fetch('product.json')
+        .then(response => response.json())
+        .then(data => {
+            products = data;
+            addDataToHTML();
+        });
+
+    function addDataToHTML() {
+        let listProductHTML = document.querySelector('.listProduct');
+        let listProductHTML2 = document.querySelector('.listProduct2');
+        let listProductHTML3 = document.querySelector('.listProduct3');
+        let listProductHTML4 = document.querySelector('.listProduct4');
+        let listProductHTML5 = document.querySelector('.listProduct5');
+
+        if (products != null) { // If products exist
+            products.forEach((product, index) => {
+                let newProduct = document.createElement('a');
+                newProduct.href = '/detail.html?id=' + product.id;
+                newProduct.classList.add('item');
+                newProduct.innerHTML = 
+                `<img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="price">₹${product.price}</div>`;
+
+                // Distribute products across 5 containers
+                if (index % 5 === 0) {
+                    listProductHTML.appendChild(newProduct);
+                } else if (index % 5 === 1) {
+                    listProductHTML2.appendChild(newProduct);
+                } else if (index % 5 === 2) {
+                    listProductHTML3.appendChild(newProduct);
+                } else if (index % 5 === 3) {
+                    listProductHTML4.appendChild(newProduct);
+                } else {
+                    listProductHTML5.appendChild(newProduct);
+                }
+            });
+        }
+    }
+    
+    
+    let slides = document.querySelectorAll(".slide");
+        let currentSlide = 0;
+
+        function changeSlide() {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+        }
+
+        setInterval(changeSlide, 2500); // Change slide every 3 seconds
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+        function closeMenu() {
+            document.querySelector('.nav-links').classList.remove('show');
+        }
+        function toggleSearch(){
+            document.getElementById('searchBar').classList.toggle('show');
+        }
+        
+        
+        let container = document.getElementById('productSlider');
+        function scrollLeft() { container.scrollBy({ left: -320, behavior: 'smooth' }); }
+        function scrollRight() { container.scrollBy({ left: 320, behavior: 'smooth' }); }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let wholesaleSection = document.querySelector(".wholesale-banner");
+            let observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.5 });
+            observer.observe(wholesaleSection);
+        });
+
+        </script>
+    </div>
+</body>
+</html>

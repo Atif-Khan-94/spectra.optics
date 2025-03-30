@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Spectra Optical</title>
+    <link rel="stylesheet" href="optics.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="logo.webp" alt="Spectra Optical Logo" class="logo">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        </div>
+        <div class="nav-links">
+            <div class="close-icon" onclick="closeMenu()">✖</div>
+            <a href="index.html">Home</a>
+            <a href="men.html">Men Glasses</a>
+            <a href="women.html">Women Glasses</a>
+            <a href="lens.html">Lens</a>
+            <a href="kids.html">Kids</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+    </div>
+    <section id="hero" id="home">
+    </section>
+    <div class="cart-container">
+        <h2>Shopping <span>Carts</span></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+        <div class="coupon-section">
+            <input type="text" id="coupon-code" placeholder="Enter Coupon Code">
+            <button onclick="applyCoupon()">Apply Coupon</button>
+            <p id="coupon-message" class="hidden">Coupon was applied!</p>
+        </div>
+        <div class="total-section">
+            <p>Total Price: ₹<span id="total-price">0</span></p>
+            <p>Final Price: ₹<span id="final-price">0</span></p>
+            <a href="checkout.html" onclick="return checkCart()">
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.webp" alt="Company Logo">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="men.html">Our Services</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="men.html">Men Glasses</a></li>
+                        <li><a href="women.html">Women Glasses</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                        <li><a href="lens.html">Lenses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="about.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                          </svg>
+                          </i></a>
+                        <a href="#"><i class="fab fa-instagram"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37a4 4 0 1 1-4.73-4.73 4 4 0 0 1 4.73 4.73z"/>
+                            <line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/>
+                          </svg>
+                          </i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; color: #D4AF37; font-size: 14px; margin-top: 20px;">
+            © 2025 Reserved | Designed by <span style="font-weight: bold; color: #ffffff;">Cyber Coders</span>
+          </p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+        function closeMenu() {
+            document.querySelector('.nav-links').classList.remove('show');
+        }
+        function toggleSearch() {
+            document.getElementById('searchBar').classList.toggle('show');
+        }
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        function loadCart() {
+    let cartItemsDiv = document.getElementById('cart-items');
+    let totalPrice = 0;
+    cartItemsDiv.innerHTML = "";
+
+    if (cart.length === 0) {
+        cartItemsDiv.innerHTML = "<tr><td colspan='6'>Your cart is empty.</td></tr>";
+        document.getElementById('total-price').innerText = 0;
+        document.getElementById('final-price').innerText = 0;
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        totalPrice += item.price * item.quantity;
+        
+        // Power ko check karo aur agar available ho toh use brackets me add karo
+        let powerText = item.power ? ` (${item.power})` : "";
+
+        let row = `<tr>
+            <td><img src="${item.image}" width="50"></td>
+            <td>${item.name}${powerText}</td> <!-- Power ko product name ke saath show karna -->
+            <td>₹${item.price}</td>
+            <td>
+                <button onclick="updateQuantity(${index}, -1)">-</button>
+                ${item.quantity}
+                <button onclick="updateQuantity(${index}, 1)">+</button>
+            </td>
+            <td>₹${item.price * item.quantity}</td>
+            <td><button onclick="removeItem(${index})">Remove</button></td>
+        </tr>`;
+
+        cartItemsDiv.innerHTML += row;
+    });
+
+    document.getElementById('total-price').innerText = totalPrice;
+    document.getElementById('final-price').innerText = totalPrice;
+}
+
+        function updateQuantity(index, change) {
+            if (cart[index].quantity + change > 0) {
+                cart[index].quantity += change;
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+        
+        function applyCoupon() {
+    let couponCode = document.getElementById('coupon-code').value;
+    let totalPrice = parseFloat(document.getElementById('total-price').innerText);
+
+    if (couponCode === "KHAN786") {
+        let discount = totalPrice * 0.15;
+        let finalPrice = totalPrice - discount;
+        
+        // Store the discount in localStorage
+        localStorage.setItem("discountApplied", "true");
+        localStorage.setItem("discountPrice", finalPrice.toFixed(2));
+
+        document.getElementById('final-price').innerText = finalPrice.toFixed(2);
+        document.getElementById('discount-message').style.display = "block";
+    } else {
+        alert("Invalid Coupon Code!");
+    }
+}
+function checkCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart.length === 0) {
+        alert("Your cart is empty! Please add some items before proceeding.");
+        return false; // Checkout page pe nahi jaane dega
+    }
+    return true; // Checkout page pe jaane dega
+}
+
+        loadCart();
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+        function closeMenu() {
+            document.querySelector('.nav-links').classList.remove('show');
+        }
+        function toggleSearch(){
+            document.getElementById('searchBar').classList.toggle('show');
+        }    
+    </script>
+</body>
+</html>

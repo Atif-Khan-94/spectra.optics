@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="optics.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="logo.webp" alt="Spectra Optical Logo" class="logo">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        </div>
+        <div class="nav-links">
+            <div class="close-icon" onclick="closeMenu()">✖</div>
+            <a href="index.html">Home</a>
+            <a href="men.html">Men Glasses</a>
+            <a href="women.html">Women Glasses</a>
+            <a href="lens.html">Lens</a>
+            <a href="kids.html">Kids</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <section id="hero" id="home">
+    </section>
+    <form action="https://api.web3forms.com/submit" method="POST" id="checkout-form">
+        <input type="hidden" name="access_key" value="59af8db0-95e4-4a3c-93d4-e15985dc80d7">
+        
+        <div class="checkout-container">
+            <h2><span>Checkout </span>Page</h2>
+    
+            <div class="user-info">
+                <h3>Billing Details</h3>
+                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                <input class="height" type="text" name="address" id="address" placeholder="Shipping Address" required>
+            </div>
+    
+            <div class="pay">
+                <h2><span>Payment </span> Method</h2>
+                <h3>Only <span> Cash On Delivery</span> is available</h3>
+            </div>
+    
+            <div class="cart-summary">
+                <h3><span>Order </span>Summary</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="checkout-items"></tbody>
+                </table>
+    
+                <h3>Delivery Charges: ₹50</h3>
+                <h3>Total Price: ₹<span id="checkout-total-price">0</span></h3>
+            </div>
+    
+            <a href="ordersummary.html"><button type="submit">Place Order</button></a>
+        </div>
+    </form>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.webp" alt="Company Logo">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="men.html">Our Services</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="men.html">Men Glasses</a></li>
+                        <li><a href="women.html">Women Glasses</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                        <li><a href="lens.html">Lenses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="about.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                          </svg>
+                          </i></a>
+                        <a href="#"><i class="fab fa-instagram"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37a4 4 0 1 1-4.73-4.73 4 4 0 0 1 4.73 4.73z"/>
+                            <line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/>
+                          </svg>
+                          </i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; color: #D4AF37; font-size: 14px; margin-top: 20px;">
+            © 2025 Reserved | Designed by <span style="font-weight: bold; color: #ffffff;">Cyber Coders</span>
+          </p>
+    </footer>
+    
+    <script src="optics.js"></script>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let totalPrice = 0;
+        let checkoutItems = document.getElementById("checkout-items");
+        let checkoutTotalPrice = document.getElementById("checkout-total-price");
+    
+        checkoutItems.innerHTML = "";
+        let orderDetails = [];
+    
+        cart.forEach((item, index) => {
+            let itemTotal = item.price * item.quantity;
+            totalPrice += itemTotal;
+            let powerText = item.power ? ` (${item.power})` : "";
+    
+            let row = document.createElement("tr");
+            row.innerHTML = `
+                <td><img src="${item.image}" alt="${item.name}" width="50"></td>
+                <td>${item.name}${powerText}</td>
+                <td>₹${item.price}</td>
+                <td>${item.quantity}</td>
+                <td>₹${itemTotal}</td>
+            `;
+            checkoutItems.appendChild(row);
+    
+            // Order details ko proper format me save karein
+            orderDetails.push(`${index + 1}) ${item.name}${powerText} - ₹${item.price} x ${item.quantity} = ₹${itemTotal}`);
+        });
+    
+        totalPrice += 50; // Delivery Charges
+        checkoutTotalPrice.innerText = totalPrice.toFixed(2);
+    
+        // Form submit event
+        document.getElementById("checkout-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+    
+            // FormData me saari values add karein
+            let formData = new FormData(event.target);
+            formData.append("order_summary", orderDetails.join("\n"));
+            formData.append("total_price", `₹${totalPrice.toFixed(2)}`);
+    
+            // Web3Forms API ko request bhejna
+            fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+})
+.then(response => response.json())
+.then(result => {
+    if (result.success) {
+        alert("🎉 Order Placed Successfully!");
+
+        // Order Summary Page ke liye Data Store Karein
+        let orderData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            address: document.getElementById("address").value,
+            cart: cart, // Pura cart data store karna
+            totalPrice: totalPrice.toFixed(2)
+        };
+
+        localStorage.setItem("orderSummary", JSON.stringify(orderData));
+
+        localStorage.removeItem("cart"); // Cart clear karein
+        window.location.href = "ordersummary.html"; // Order summary page par redirect
+    } else {
+        alert("❌ Order Failed. Please try again.");
+    }
+})
+.catch(error => console.error("Error:", error));
+        });
+    });
+    </script>
+        
+    </body>
+</html>

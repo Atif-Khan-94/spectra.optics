@@ -1,0 +1,307 @@
+[
+    {
+        "id": 1,
+        "name":"Violet Blue Cut",
+        "price": 280,
+        "image": "lens.webp",
+        "description": "Expertly crafted, the Ash Violet Blue Cut Lens offers superior eye protection with a stylish edge. Designed for comfort and clarity, this premium lens effectively filters harmful blue light, reducing strain for prolonged screen use. Available exclusively at Spectra Optical, this high-quality lens delivers unmatched value at its price—offering precision, durability, and elegance you won’t find elsewhere."
+    },
+    {
+        "id": 2,
+        "name":" LD02 LOUNGE CHAIR",
+        "price": 250,
+        "image": "img/2.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 3,
+        "name":"Hard Coat",
+        "price": 520,
+        "image": "lensimg/durato1.jpg",
+        "description": "Designed for durability and clarity, the Durato Hard Coat Lens features an ultra-resistant coating that protects against scratches and wear. Its high-transparency surface ensures a crisp, distortion-free vision, making it a reliable everyday choice."
+    },
+    {
+        "id": 4,
+        "name":" Advance Blue cut progressive Green",
+        "price": 1810,
+        "image": "lensimg/verso1.jpeg",
+        "description": "Combining advanced blue light protection with a subtle green tint, the Verso Advance Blue Cut Progressive Green Lens enhances visual clarity while reducing digital eye strain. Its progressive design ensures seamless vision transitions, making it ideal for modern multitaskers."
+    },
+    {
+        "id": 5,
+        "name":" LD05 LOUNGE CHAIR",
+        "price": 300,
+        "image": "img/5.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 6,
+        "name":"Crystal Blue Cut",
+        "price": 400,
+        "image": "lensimg/ash2.webp",
+        "description": "Masterfully crafted, the Ash Crystal Blue Cut Lens exudes elegance and precision. Designed for clarity and style, its striking blue hue enhances visual appeal while ensuring superior optical performance. The finely cut facets reflect light beautifully, creating a mesmerizing effect. Perfect for those who seek both luxury and functionality, this lens is a true statement of sophistication."
+    },
+    {
+        "id": 7,
+        "name":" LD07 LOUNGE CHAIR",
+        "price": 200,
+        "image": "img/7.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 8,
+        "name":"Hard Coat KT",
+        "price": 600,
+        "image": "lensimg/durato2.webp",
+        "description": "With enhanced toughness, the Durato Hard Coat KT Lens takes durability to the next level. Specially crafted to withstand daily wear and tear, it maintains superior optical performance while offering long-lasting protection."
+    },
+    {
+        "id": 9,
+        "name":" Advance Dual Progressive",
+        "price": 2450,
+        "image": "lensimg/verso2.webp",
+        "description": "Combining advanced blue light protection with a subtle green tint, the Verso Advance Blue Cut Progressive Green Lens enhances visual clarity while reducing digital eye strain. Its progressive design ensures seamless vision transitions, making it ideal for modern multitaskers."
+    },
+
+    {
+        "id": 10,
+        "name":" LD08 LOUNGE CHAIR",
+        "price": 200,
+        "image": "img/8.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 11,
+        "name":"Dual Coat",
+        "price": 400,
+        "image": "lensimg/ash3.jpg",
+        "description": "Engineered for unparalleled clarity, the Ash Dual Coat Lens features an advanced dual-layer coating that enhances durability and vision. Its superior anti-glare and scratch-resistant properties ensure long-lasting performance, making it an ideal choice for both style and protection."
+    },
+    {
+        "id": 12,
+        "name":" LD02 LOUNGE CHAIR",
+        "price": 250,
+        "image": "img/2.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 13,
+        "name":"Magenta Blue Cut",
+        "price": 620,
+        "image": "lensimg/durato3.jpg",
+        "description": "A fusion of style and functionality, the Durato Magenta Blue Cut Lens effectively filters harmful blue light while adding a sophisticated magenta tint. Ideal for prolonged screen exposure, it minimizes eye fatigue and enhances visual comfort."
+    },
+    {
+        "id": 14,
+        "name":" Advance Pg Drive Progressive",
+        "price": 3540,
+        "image": "lensimg/verso3.jpg",
+        "description": "Optimized for driving, the Verso Advance PG Drive Progressive Lens enhances contrast, minimizes glare, and ensures comfortable vision at all distances. A must-have for frequent drivers, it delivers sharp and fatigue-free visual performance."
+    },
+    {
+        "id": 15,
+        "name":" LD05 LOUNGE CHAIR",
+        "price": 300,
+        "image": "img/5.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 16,
+        "name":"Mari Blue",
+        "price": 680,
+        "image": "lensimg/ash4.jpg",
+        "description": "The Ash Mari Blue Lens combines elegance with functionality, offering a soothing blue tint that reduces digital strain. Crafted for modern lifestyles, it provides optimal eye comfort while maintaining a sleek, sophisticated look."
+    },
+    {
+        "id": 17,
+        "name":" LD07 LOUNGE CHAIR",
+        "price": 200,
+        "image": "img/7.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 18,
+        "name":"PG Hard Coat",
+        "price": 840,
+        "image": "lensimg/durato4.jpg",
+        "description": "The Durato PG Hard Coat Lens combines premium-grade scratch resistance with superior optical clarity. Built for those who demand high performance, it provides an ultra-smooth finish for effortless vision."
+    },
+    {
+        "id": 19,
+        "name":" Advance Blue Cut Drivex Progressive",
+        "price": 1950,
+        "image": "lensimg/verso4.jpg",
+        "description": "A perfect fusion of driving enhancement and blue light protection, the Verso Advance Blue Cut Drivex Progressive Lens reduces glare from headlights while filtering harmful blue light. It ensures comfortable vision in both day and night conditions."
+    },
+
+    {
+        "id": 20,
+        "name":" LD08 LOUNGE CHAIR",
+        "price": 200,
+        "image": "img/8.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 21,
+        "name":"Night Drive",
+        "price": 1000,
+        "image": "lensimg/ash5.jpg",
+        "description": "Designed for night-time vision enhancement, the Ash Night Drive Lens reduces glare from oncoming headlights and streetlights, ensuring a safer and more comfortable driving experience. A must-have for frequent travelers, it enhances contrast and clarity in low-light conditions."
+    },
+    {
+        "id": 22,
+        "name":" LD02 LOUNGE CHAIR",
+        "price": 250,
+        "image": "img/2.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 23,
+        "name":"PG  Blue cut Progressive",
+        "price": 710,
+        "image": "lensimg/durato5.webp",
+        "description": "Engineered for seamless vision at all distances, the Durato PG Blue Cut Progressive Lens incorporates advanced blue light filtering to reduce digital strain. Perfect for multifocal needs, it ensures a smooth transition between near, intermediate, and distant viewing."
+    },
+    {
+        "id": 24,
+        "name":" Advance Arc Progressive",
+        "price": 1610,
+        "image": "lensimg/verso5.jpg",
+        "description": "Equipped with anti-reflective coating, the Verso Advance ARC Progressive Lens offers superior clarity with reduced glare. Its progressive design allows for smooth vision correction, making it perfect for all-day wear."
+    },
+    {
+        "id": 25,
+        "name":" LD05 LOUNGE CHAIR",
+        "price": 300,
+        "image": "img/5.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 26,
+        "name":"Magneta Blue Cut",
+        "price": 400,
+        "image": "lensimg/ash6.jpeg",
+        "description": "Blending innovation with aesthetics, the Ash Magenta Blue Cut Lens features a vibrant magenta hue that not only adds a stylish touch but also effectively filters out harmful blue light. Ideal for digital screen users, it helps reduce eye fatigue and strain."
+    },
+    {
+        "id": 27,
+        "name":" LD07 LOUNGE CHAIR",
+        "price": 200,
+        "image": "img/7.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 28,
+        "name":"PG Poly Blue cut blue Progressive",
+        "price": 2000,
+        "image": "lensimg/durato6.jpg",
+        "description": "Blending lightweight durability with progressive vision correction, this lens offers enhanced blue-light protection for long screen hours. Its polycarbonate build ensures impact resistance while maintaining sharp, distortion-free vision."
+    },
+    {
+        "id": 29,
+        "name":" Advance Pg Arc Progressive",
+        "price": 2450,
+        "image": "lensimg/verso6.jpg",
+        "description": "With precision-cut optics and a premium anti-reflective coating, the Verso Advance PG ARC Progressive Lens delivers unmatched visual comfort. Whether reading, working, or driving, it provides sharp, strain-free vision at every distance."
+    },
+
+    {
+        "id": 30,
+        "name":" LD08 LOUNGE CHAIR",
+        "price": 200,
+        "image": "img/8.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 31,
+        "name":"PG blue Cut Optimax",
+        "price": 900,
+        "image": "lensimg/ash7.jpg",
+        "description": "A pinnacle of optical technology, the Ash PG Blue Cut Optimax Lens offers maximum protection against blue light while maintaining true color perception. Its precision-cut design ensures crystal-clear vision, making it a top choice for professionals and gamers alike."
+    },
+    {
+        "id": 32,
+        "name":" LD02 LOUNGE CHAIR",
+        "price": 250,
+        "image": "img/2.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 33,
+        "name":"Photo Brown ARC",
+        "price": 680,
+        "image": "lensimg/durato7.webp",
+        "description": "A masterpiece in photochromic technology, the Durato Photo Brown ARC Lens adapts to changing light conditions, darkening under sunlight and clearing indoors. Its brown tint enhances contrast and reduces glare for a comfortable visual experience."
+    },
+    {
+        "id": 34,
+        "name":" Advance hardcoat Progressive",
+        "price": 1510,
+        "image": "lensimg/verso7.jpg",
+        "description": "Built for longevity, the Verso Advance Hardcoat Progressive Lens features a scratch-resistant coating that ensures durability without compromising on optical sharpness. Its progressive technology allows effortless transitions between near and far vision."
+    },
+    {
+        "id": 35,
+        "name":" LD05 LOUNGE CHAIR",
+        "price": 300,
+        "image": "img/5.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 36,
+        "name":"Poly Blue Cut",
+        "price": 480,
+        "image": "lensimg/ash8.jpg",
+        "description": "Built with durability in mind, the Ash Poly Blue Cut Lens is made from high-quality polycarbonate, offering exceptional impact resistance. Lightweight yet strong, it provides all-day comfort while shielding eyes from digital fatigue."
+    },
+    {
+        "id": 37,
+        "name":" LD07 LOUNGE CHAIR",
+        "price": 200,
+        "image": "img/7.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 38,
+        "name":"Drivex 61",
+        "price": 1000,
+        "image": "lensimg/durato8.webp",
+        "description": "Designed for driving excellence, the Durato Drivex 61 Lens enhances contrast and reduces glare from headlights and reflections. Whether day or night, it provides sharper and safer vision for a confident driving experience."
+    },
+    {
+        "id": 39,
+        "name":" Advance Pg harcoat Progressive",
+        "price": 2350,
+        "image": "lensimg/verso8.webp",
+        "description": "For those seeking ultimate durability with premium performance, the Verso Advance PG Hardcoat Progressive Lens offers a reinforced protective layer combined with smooth progressive vision correction. Ideal for daily wear, it guarantees lasting clarity and protection."
+    },
+
+    {
+        "id": 40,
+        "name":" LD08 LOUNGE CHAIR",
+        "price": 200,
+        "image": "img/8.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 41,
+        "name":"MR8 blue Cut",
+        "price": 800,
+        "image": "lensimg/ash9.jpeg",
+        "description": "For those seeking premium performance, the Ash MR8 Blue Cut Lens delivers superior optical clarity with enhanced resistance to scratches and reflections. Its advanced blue-light filtering technology ensures long-term eye health and visual comfort."
+    },
+    {
+        "id": 42,
+        "name":" LD02 LOUNGE CHAIR",
+        "price": 250,
+        "image": "img/2.png",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    },
+    {
+        "id": 43,
+        "name":"PG Blue Cut",
+        "price": 540,
+        "image": "lensimg/durato9.jpeg",
+        "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
+    }
+]

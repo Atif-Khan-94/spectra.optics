@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Your Brand</title>
+    <link rel="stylesheet" href="optics.css">
+    <style>
+        .heading h1 {
+            font-size: 55px;
+            text-transform: capitalize;
+            text-align: start;
+            font-weight: 400;
+            padding: 7px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            margin-left: 20px;
+            color: #D4AF37;
+        }
+
+        .heading p {
+            color: #ffffff;
+            font-size: 23px;
+            font-weight: 200;
+            margin-left: 22px;
+        }
+
+        .CEO {
+            background: linear-gradient(145deg, #222, #111);
+            box-shadow: 0px 0px 20px #D4AF37;
+
+        }
+
+        .review h3 {
+            font-size: 35px;
+            text-transform: capitalize;
+            text-align: center;
+            padding: 7px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .review {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .review img {
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+            margin: 10px 0;
+        }
+
+        .review p {
+            color: white;
+            font-size: 18px;
+            font-weight: 200;
+            line-height: 25px;
+            margin-bottom: 12px;
+        }
+
+        .review span {
+            color: #D4AF37;
+        }
+
+        .review h2 {
+            font-size: 25px;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin-bottom: 2px;
+        }
+
+        .review h4 {
+            margin-bottom: 2px;
+            padding: 14px;
+            font-weight: 300;
+        }
+
+        .review button {
+            border: solid rgb(210, 210, 210);
+            border-radius: 7px;
+            background-color: rgb(210, 210, 210);
+            color: white;
+            padding: 8px;
+            width: 150px;
+            margin-bottom: 15px;
+            font-size: medium;
+            color: white;
+        }
+
+        .review button:hover {
+            background-color: grey;
+            border-color: grey;
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-weight: 400;
+            font-size: 28px;
+        }
+        .faq span{
+            color:#D4AF37 ;
+        }
+        .faq{
+            font-size: 28px;
+        }
+
+        .faqbox {
+            display: flex;
+            background-color: rgba(45, 45, 45, 0.69);
+            padding: 20px;
+            max-width: 70vw;
+            margin: 9px auto;
+            justify-content: space-between;
+            cursor: pointer;
+            color: white;
+            font-weight: 200;
+            font-size: 20px;
+        }
+
+
+        .faqbox svg {
+            filter: invert(1);
+        }
+
+        .faqbox:hover {
+            background-color: rgb(47, 47, 47);
+        }
+        .faqbox svg {
+            transition: transform 0.3s ease-in-out;
+        }
+        .faqbox.active svg {
+            transform: rotate(135deg);
+        }
+        .answer {
+            max-height: 0;
+            max-width: 70vw;
+            overflow: hidden;
+            background:  rgba(45, 45, 45, 0.69);;
+            margin: 9px auto;
+            justify-content: space-between;
+            cursor: pointer;
+            color: white;
+            font-weight: 200;
+            font-size: 20px ;
+            border-left: 3px solid #000;
+            transition: max-height 0.4s ease-in-out, padding 0.3s;
+        }
+        .answer.show {
+            max-height: 100px; /* Adjust based on content */
+            padding: 10px 16px;
+        }
+        @media screen and (max-width: 768px){
+            .heading h1{
+                font-size: 28px;
+            }
+            .heading p{
+                font-size: 15px;
+                font-weight: 400;
+            }
+            .review h3{
+                font-size: 28px;
+            }
+            .review p {
+                font-size: 15px;
+                font-weight: 400;
+            }
+            .faqbox{
+                font-size: 15px;
+                font-weight: 400;
+            }
+            .answer{
+                font-size: 15px;
+                font-weight: 400;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="logo.webp" alt="Spectra Optical Logo" class="logo">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        </div>
+        <div class="nav-links">
+            <div class="close-icon" onclick="closeMenu()">✖</div>
+            <a href="index.html">Home</a>
+            <a href="men.html">Men Glasses</a>
+            <a href="women.html">Women Glasses</a>
+            <a href="lens.html">Lens</a>
+            <a href="kids.html">Kids</a>
+            <a href="about.html" class="H">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <section id="hero" id="home">
+    </section>
+    <section>
+        <div class="heading">
+            <h1>Mission</h1>
+            <p>To enhance your vision with premium lenses and stylish frames at unbeatable prices. Our mission is to
+                <br>
+                provide crystal-clear vision and lasting comfort through advanced optical technology and expert
+                craftsmanship. <br> We offer durable, lightweight, and fashionable eyewear, ensuring top quality at the
+                best
+                prices. <br> Experience the perfect blend of affordability, style, and clarity—because your vision
+                deserves
+                the best!
+            </p>
+            <h1>Vision</h1>
+            <p>At Spectra Optical, our vision is to redefine eyewear by making premium-quality lenses and frames <br>
+                accessible to everyone. We aim to set new standards in optical innovation, ensuring crystal-clear
+                vision, <br> unmatched comfort, and stylish designs—all at affordable prices. By blending cutting-edge
+                technology with expert craftsmanship, <br> we strive to make perfect vision a reality for all.</p>
+            <h1>Values</h1>
+            <p> We are committed to delivering eyewear that combines precision, durability, and style. Integrity drives
+                our
+                work, <br> ensuring transparency and trust with every purchase. We prioritize affordability without
+                compromising excellence, <br> making clear vision accessible to all. With a passion for continuous
+                improvement, <br> we embrace advanced technology and expert craftsmanship to provide the best optical
+                solutions for our customers.
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="CEO">
+            <div class="review">
+                <h3>Our <span>Commitment</span></h3>
+                <img src="aboutimage.webp" alt="Commitment to Quality">
+                <h2>Enhancing Your Vision <span> with Excellence </span></h2>
+                <h4>Precision | Clarity | Affordability</h4>
+                <p>At Spectra Optical, we provide high-quality lenses and stylish frames for crystal-clear vision.</p>
+                <p>Our eyewear combines durability, comfort, and cutting-edge optical technology.</p>
+                <p>We ensure premium quality at unbeatable prices—because your vision is our priority!</p>
+
+    </section>
+    <section class="why-choose-us">
+        <h2>Why <span>Choose</span> Us?</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="img1.webp" alt="">
+                <h3><span>High-Quality</span> Lenses & Frames</h3>
+                <p>Premium frames and high-quality lenses for superior clarity, durability, and style. Experience
+                    comfort and precision with expert craftsmanship.</p>
+            </div>
+            <div class="feature">
+                <img src="img2.webp" alt="">
+                <h3><span>Affordable</span> Prices</h3>
+                <p>Get premium frames and high-quality lenses at an affordable price. Experience durability, clarity,
+                    and style without compromising on budget.</p>
+            </div>
+            <div class="feature">
+                <img src="img3.webp" alt="">
+                <h3><span>Expert</span> Consultation & Eye Care</h3>
+                <p>Get expert consultation and premium eye care for perfect vision. Experience professional guidance,
+                    advanced solutions, and personalized service for healthy eyes.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="faq">
+            <h2>Frequently Asked <span> Questions </span></h2>
+        </div>
+        <div class="faqbox">
+            <span>Q. What types of lenses do you offer?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4V20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 12H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+            <p>Ans. We offer single vision, bifocal, progressive, blue light, anti-glare, and UV-protected lenses.</p>
+        </div>
+    
+        <div class="faqbox">
+            <span>Q. How can I contact customer support?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4V20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 12H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+            <p>Ans. You can reach us through our contact page, email, or WhatsApp for any inquiries or assistance.</p>
+        </div>
+    
+        <div class="faqbox">
+            <span>Q. Are your frames durable?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4V20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 12H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+            <p>Ans. Yes, our frames are made from high-quality, durable materials for long-lasting use.</p>
+        </div>
+        <div class="faqbox">
+            <span>Q. How do I clean and maintain my glasses?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4V20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 12H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+            <p>Ans. Use a microfiber cloth and lens cleaning solution to keep your glasses clean. Avoid using harsh chemicals or rough materials that may damage the lenses.</p>
+        </div>
+        <div class="faqbox">
+            <span>Q. Can I get customized lenses for my frames?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4V20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 12H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+            <p>Ans. Yes, you can send us your frames, and we will customize the lenses as per your prescription.</p>
+        </div>
+        <div class="faqbox">
+            <span>Q. Can I try frames before buying?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4V20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 12H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+            <p>Ans. If you visit our store, you can try frames in person. For online purchases, we provide detailed frame measurements to help you choose the perfect fit.</p>
+        </div>
+    </section>
+    <section class="wholesale-section">
+        <div class="wholesale-banner">
+            <h2>Buy in Bulk & Save More</h2>
+            <p>We offer premium eyewear at wholesale prices. Contact us for bulk purchases.</p>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.webp" alt="Company Logo">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="men.html">Our Services</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="men.html">Men Glasses</a></li>
+                        <li><a href="women.html">Women Glasses</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                        <li><a href="lens.html">Lenses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="about.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                          </svg>
+                          </i></a>
+                        <a href="#"><i class="fab fa-instagram"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37a4 4 0 1 1-4.73-4.73 4 4 0 0 1 4.73 4.73z"/>
+                            <line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/>
+                          </svg>
+                          </i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; color: #D4AF37; font-size: 14px; margin-top: 20px;">
+            © 2025 Reserved | Designed by <span style="font-weight: bold; color: #ffffff;">Cyber Coders</span>
+          </p>
+    </footer>
+    <script src="optics.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const banner = document.querySelector(".banner");
+            banner.style.opacity = "0";
+            setTimeout(() => {
+                banner.style.transition = "opacity 1.5s ease-in-out";
+                banner.style.opacity = "1";
+            }, 500);
+        });
+        document.querySelectorAll(".faqbox").forEach((box, index) => {
+            box.addEventListener("click", () => {
+                const answer = document.querySelectorAll(".answer")[index];
+                
+                // Toggle show class
+                answer.classList.toggle("show");
+                
+                // Toggle active class for rotation
+                box.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+
+</html>
